@@ -1,0 +1,49 @@
+In order to receive credit for a Programming Assignment, each submission must:
+
+    Run. No credit will be given to programs that do not run.
+    Use the filename(s) specified in the instructions and What to Submit section. Do not include anything extra such as your name or chapter number.
+    Include the comment block as seen in the What to Submit section, with your name, module number, and part.
+
+----------
+
+This is the first programming assignment. Be aware that instructions are requirements, not suggestions. Most assignments will have two parts.
+
+----------
+
+Part A
+
+Create a program named name.py that:
+
+    Input #1 prompts the user to input their first name and stores it in a variable
+    Input #2 prompts the user for their last name, and store that in a second variable
+    creates a third variable with their full name (first and last, including a space between)
+    print the full name
+    output the length of the full name
+    output the user's initials with periods after each letter and a space between them
+    output the second-to-last letter in the first name
+    output the second letter in the last name
+
+Example (note that your program does not need to look, or behave, like exactly like this example - it is here to show you one way it might look when the program runs properly):
+
+1-2.JPG
+Part B
+
+Create a program named family.py that:
+
+    creates a dictionary of names and ages for a family of at least four people; this may be your family or a fictional family (such as the Simpsons)
+    prints out the dictionary
+    prints the age of the third person in the dictionary
+    adds an entry (without changing or re-creating the existing dictionary data) for Tracy who is 60 years old
+    prints the dictionary again
+    prompts the user for a name to look up, and then outputs that person's age
+
+Example (note that your program does not need to look, or behave, like exactly like this example - it is here to show you one way it might look when the program runs properly):
+
+1-4.JPG
+
+ 
+
+What To Submit
+
+    name.py
+    family.py

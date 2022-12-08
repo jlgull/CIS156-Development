@@ -1,0 +1,37 @@
+In order to receive credit for a Programming Assignment, each submission must:
+
+    Run. No credit will be given to programs that do not run.
+    Use the filename(s) specified in the What to Submit section. Do not include anything extra such as your name or chapter number.
+    Include the comment block as seen in the What to Submit section, with your name, module number, and part.
+    Use the looping concepts covered in this Module.
+
+----------
+Part A
+
+Create a program called product_loop.py that:
+
+    Uses a loop to:
+        Input #1: Prompts the user for a starting number (integer) greater than 1.
+        Input #2: Prompts the user for an ending number (integer) greater than 1.
+        If either of the first two numbers is less than 2
+            display a message that includes the word ERROR and that they need to enter numbers greater than 1 and
+            continues to prompt the user for two numbers greater than 1 if either number is less than 1.
+
+    Using a separate loop, calculate the product (the result of multiplication) of every number from the first to the second.
+    The output will be the product of all numbers.
+
+Examples (note that your program does not need to look, or behave, like exactly like these examples - they're here to show that all error conditions are caught and that, when there is no error condition, the result is outputted):
+
+1-1.JPG
+
+Part B
+
+Create a program called valid_input.py. In a loop, prompt the user to input their age in years; keep prompting until the user inputs a number greater than zero and less than 123 (the oldest person on record lived to 122 years, 164 days). Once the user has input a valid number, output "Thank You"
+
+Examples (note that your program does not need to look, or behave, like exactly like these examples - they're here to show that all error conditions are caught and that, when there is no error condition, the result is outputted):
+
+1-7.JPG
+What To Submit
+
+    product_loop.py
+    valid_input.py

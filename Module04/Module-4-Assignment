@@ -1,0 +1,99 @@
+To complete this assignment, do either Part A or Part B. If you do both parts correctly, you will earn 50 points extra credit.
+----------
+In order to receive credit for a Programming Assignment, each submission must:
+
+    Run. No credit will be given to programs that do not run.
+    Use the filename(s) specified in the What to Submit section. Do not include anything extra such as your name or chapter number.
+    Include the comment block as seen in the What to Submit section, with your name, module number, and part.
+    Demonstrate the use of if statements as the module topic is branching.
+
+----------
+
+Part A
+
+Create a Python file, named airfare_cost.py, that calculates the total cost of an airline ticket, based on the following requirements:
+
+    Input #1: One of these three letter airport codes, which will be presented to the user:
+        LAX for Los Angeles
+        LGA for New York (LaGuardia)
+        LHR for London (Heathrow)
+    Input #2: One of these numerical day codes, which will be presented to the user:
+        1 for Monday
+        2 for Tuesday
+        3 for Wednesday
+        4 for Thursday
+        5 for Friday
+        6 for Saturday
+        7 for Sunday
+    Input #3: Do they have checked baggage? The accepted inputs are Y for yes or N for no.
+    Calculate the cost of the air fare, based on destination airport and day of week and whether or not baggage is checked:
+        LAX: $100  Mon (1) through Friday (5), $150 Sat (6), $125 Sun (7)
+        LGA: $175  Mon (1) through Friday (5), $275 Sat (6), $250 Sun (7)
+        LHR: $1,000 Mon (1) and Fri (5), $800 Tue (2) through Thu (4), $1200 Sat (6), $1100 Sun (7)
+        Checked baggage cost +$50 for US destinations (LAX and LGA), +$100 for London (LHR).
+        Refer to the table, below.
+    Output is the total cost of the ticket.
+    Additional note: Error checking is not required.
+
+Mod 4 table-1.JPG
+
+Example outputs. Yours does not need to look as detailed as these (remember: they need to tell the user what options are available). It must have the three inputs and the one output with the proper cost:
+
+1-5.JPG
+
+1-6.JPG
+
+----------
+
+Part B
+
+Create a Python file, named IP_address.py, that:
+
+    Input: Prompt the user to enter an IPv4 address. An IPv4 address is made up of four octets, each separated by a dot. Examples: 192.168.1.1, 10.0.0.1, 148.34.51.200, 1.2.3.4
+    Using the user-supplied information, determine:
+        The address's class: A, B, C, D, or E (capital letters must be used)
+        If any address begins with 0 or if any octet has a value greater than 255, then it is invalid (this word must be used)
+        If the address begins with 127, the the address is a loopback (this word must be used)
+        If the address is public or a private (these words must be used)
+    Output the IPv4 address's class and whether it is a public, private, loopback, or invalid.
+
+IPv4 address ranges, classes, and private ranges (if an address is not private, it is public). x is any number from 0 to 255:
+
+Class A:   1.x.x.x through 127.x.x.x (private range: 10.x.x.x, 127.x.x.x is loopback)
+Class B: 128.x.x.x through 191.x.x.x (private range: 172.16.x.x through 172.31.x.x)
+Class C: 192.x.x.x through 223.x.x.x (private range: 192.168.x.x)
+Class D: 224.x.x.x through 239.x.x.x (known as multicast)
+Class E: 240.x.x.x through 255.x.x.x (known as experimental)
+Because string handling is a Chapter 7 topic and lists is a chapter 8 topic, here's some things that will help:
+
+After prompt the user for an IPv4 address, the split() function can be used to separate the number into their respective octets, based on the dots, for example:
+
+my_var = input('Please enter an IPv4 adddress: ')
+my_octet_list = my_var.split('.')
+
+This creates a list of octets. A list has elements that can be accessed by an index number. Index numbers begin at 0. Given an address of 192.168.1.2, the separated numbers (as strings at this point) can be accessed as my_octet_list[0] ('192'),  my_octet_list[1] ('168'),  my_octet_list[2] ('1'), and  my_octet_list[3] ('2').
+
+Finally, it is easier to deal with the integers as opposed to the strings. A clever trick to do this is:
+
+my_octet_list = [eval(i) for i in my_octet_list]
+Now the values in the list elements my_octet_list[0] through my_octet_list[3] are integers.
+
+Here's a flow chart that may help:
+
+1-21e1a004-8306-4405-9e1b-babd2c3ffc3c.JPG
+
+Example outputs. Yours does not need to look as detailed as these (remember: they need to tell the user what options are available). It must have the three inputs and the one output with the proper cost:
+
+1-fc352998-919c-4ae2-ac42-5035250c1e9a.JPG
+
+1-dfc27561-5fe2-45b1-9068-cc51a27a2e12.JPG
+
+1-5c12434d-b1c9-45c7-82b9-975ae4033a59.JPG
+----------
+What To Submit
+
+airfare_cost.py
+
+and / or
+
+ip_address.py
