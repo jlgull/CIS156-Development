@@ -18,6 +18,11 @@ __pycache__/
 *.json
 *.xml
 *.iml
+*.sh
+*.result
+*.txt
+
+tempfile
 
 
 # Distribution / packaging
