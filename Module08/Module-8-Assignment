@@ -1,0 +1,46 @@
+In order to receive credit for a Programming Assignment, each submission must:
+
+    Run. No credit will be given to programs that do not run.
+    Use the filename(s) specified in the What to Submit section. Do not include anything extra such as your name or chapter number.
+    Include the comment block as seen in the What to Submit section, with your name, module number, and part.
+    Use the looping concepts covered in this Module.
+
+----------
+Part A
+
+Create a program called grocery_list.py that:
+
+    Input #1: Asks the user to input how many items they will be purchasing at the grocery store.
+    Input #2 through x (where x is the number the user entered): Uses a loop to prompt the user to
+        input each of the items they are buying, storing each input into a list.
+    When finished entering items, print the full list.
+
+Example (note that your program does not need to look, or behave, like exactly like this example -
+  it is here to show you one way it might look when the program runs properly):
+
+Part B
+
+Create a program called baseball_players.py that:
+
+    Has a dictionary with seven baseball players (for example: Babe Ruth, Louis Gonzalez), etc.
+      and their lifetime batting average (for example: .342, .283).
+      One of the players must be Willie Mays who had a lifetime batting average of .301.
+      (Note: a good reference to look up players can be found here: https://www.baseball-reference.com/
+      Links to an external site.).
+    Display the available players to the user.
+    Prompt the user to enter one of the names. Instruct the user that proper capitalization and spaces are required.
+    Display the batting average for the play that the user entered.
+    The program repeats the previous three steps this until the user enters quit at the prompt.
+
+Note: The program does NOT need to gracefully handle the error that may occur if the player is not
+  found in the dictionary; for now, your program only needs to work when a player is entered correctly.
+
+Note: If the program displays a .301 batting average as 0.301, that is OK.
+
+Example (note that your program does not need to look, or behave, like exactly like this example -
+  it is here to show you one way it might look when the program runs properly):
+
+What To Submit
+
+    grocery_list.py
+    baseball_players.py

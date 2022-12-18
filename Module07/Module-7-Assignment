@@ -1,0 +1,47 @@
+In order to receive credit for a Programming Assignment, each submission must:
+
+    Run. No credit will be given to programs that do not run.
+    Use the filename(s) specified in the What to Submit section. Do not include anything extra such as your name or chapter number.
+    Include the comment block as seen in the What to Submit section, with your name, module number, and part.
+    Use the looping concepts covered in this Module.
+
+----------
+Part A
+
+Create a program in a file named letter_count.py that:
+
+    Includes adequate instructions to the user about how to use the program.
+    Inputs #1 through 4: Prompt the user to enter four different words or phrases, one at a time;
+      storing each response in a separate variable.
+    Input #5: Next, prompt the user a letter they wish to count.
+    Determine how many times the letter occurs in each of the four words/phrases,
+      regardless of case (uppercase or lowercase).
+    Determine the total number of times the letter occurs in all words/phrases,
+      regardless of case (uppercase or lowercase).
+    Output is a formatted table displaying:
+        the four words,
+        the number of times the letter appears in each word/phrase,
+        the total number of times the letter appears.
+    Output a formatted table displaying the results.
+
+Example (note that your program does not need to look, or behave, like exactly like this example -
+  it is here to show you one way it might look when the program runs properly):
+
+
+Part B
+
+Create a program in a file named str_modifier.py that:
+
+    Includes adequate instructions to the user about how to use the program.
+    Asks the user for the name of their favorite sports team. The single input should be the
+      name of the city and team name; for example: Phoenix Cardinals or Los Angeles Lakers
+    Replaces all spaces with underscore characters. This must be done using a string method.
+    Outputs the result.
+
+Example (note that your program does not need to look, or behave, like exactly like this example -
+  it is here to show you one way it might look when the program runs properly):
+
+What To Submit
+
+    letter_count.py
+    str_modifier.py

@@ -1,0 +1,43 @@
+In order to receive credit for a Programming Assignment, each submission must:
+
+    Run. No credit will be given to programs that do not run.
+    Use the filename(s) specified in the What to Submit section. Do not include anything extra such as your name or chapter number.
+    Include the comment block as seen in the What to Submit section, with your name, module number, and part.
+    Use the looping concepts covered in this Module.
+
+----------
+Part A
+
+Create a program called total_cash.py that determines the total value of a wallet full of cash.
+
+    Inputs #1 through 7: It prompts the user to input the quantity of each denomination of bills, in the following order: 1s, 2s, 5s, 10s, 20s, 50s, and 100s (this is seven prompts).
+    Using a function that you create that accepts the information collected from the user, calculates the total value of all of the bills, and returns (not print) the total amount.
+    Output the total amount of cash.
+
+For example, if a user has 3 ones, 3 tens, and 1 fifty, their total is $83 in cash.
+
+1-2b039b2c-7a93-455d-b5ea-53531f350858.JPG
+Part B
+
+Create a program called shipping_price.py that calculates the shipping price for a purchase.
+
+    Input #1: Prompt the user for the total number of items being shipped.
+    Input #2: Prompt the user for the total weight of all items.
+    Using a function that you create that accepts the information collected from the user,
+      calculates the shipping cost and returns (not print) the total amount.
+      Use the following parameters to determine shipping costs.
+        Less than 3 items and less than two pounds: $5.50 shipping charge.
+        Less than 3 items and two pounds or over: $7.00 shipping charge.
+        3 to 5 items and less than three pounds: $8.50 shipping charge.
+        Anything else: $11.00 shipping charge.
+    Display the shipping cost to the user. (Note: the dollar amount does not need to be formatted to two decimal places.)
+
+Example (note that your program does not need to look, or behave, like exactly like this example -
+  it is here to show you one way it might look when the program runs properly):
+
+1-7.JPG
+
+What To Submit
+
+    product_loop.py
+    valid_input.py
