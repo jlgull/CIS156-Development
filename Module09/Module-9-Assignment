@@ -1,0 +1,49 @@
+Module 9 Programming Assignment
+
+In order to receive credit for a Programming Assignment, each submission must:
+
+    Run. No credit will be given to programs that do not run.
+    Use the filename(s) specified in the What to Submit section. Do not include anything extra such as your name or chapter number.
+    Include the comment block as seen in the What to Submit section, with your name, module number, and part.
+    Use the looping concepts covered in this Module.
+
+----------
+
+Create a program called shopping_cart.py that uses a class and objects to track a couple of items for purchase from an online store. There are three steps/sections to this program:
+
+1. Create the ItemToPurchase class with the following specifications:
+
+    Attributes (variable names) and their default type.
+        item_name (string)
+        item_price (float)
+        item_quantity (int)
+    Default constructor
+        Initializes item_name = "none", item_price = 0, item_quantity = 0
+    Method (a function in a class) name:
+        print_item_cost()
+
+2. In the main section of your code (not in the class definition):
+
+    Instantiate the ItemToPurchase class.
+    Prompt the user for two items, creating two objects of the ItemToPurchase class. The order for each is:
+        Input #1: item name
+        Input #2: item price
+        Input #3: item quantity
+
+3.  Finally:
+
+    Calculate the subtotal for the two items.
+    Output the two subtotals (see example).
+    Calculate the total cost.
+    Output the total cost.
+
+Note that the dollar values must display two decimal places (refer to zyBooks, chapter 7.2, on floating-point precision).
+
+Example (note that your program does not need to look, or behave, like exactly like this example -
+  it is here to show you one way it might look when the program runs properly):
+
+What To Submit
+
+    shopping_cart.py
+
+

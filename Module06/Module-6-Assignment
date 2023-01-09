@@ -1,3 +1,5 @@
+Module 6 Programming Assignment
+
 In order to receive credit for a Programming Assignment, each submission must:
 
     Run. No credit will be given to programs that do not run.
@@ -39,5 +41,5 @@ Example (note that your program does not need to look, or behave, like exactly l
 
 What To Submit
 
-    product_loop.py
-    valid_input.py
+    total_cash.py
+    shipping_price.py

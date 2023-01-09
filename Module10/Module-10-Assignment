@@ -1,0 +1,48 @@
+Module 10 Programming Assignment
+
+In order to receive credit for a Programming Assignment, each submission must:
+
+    Run. No credit will be given to programs that do not run.
+    Use the filename(s) specified in the What to Submit section. Do not include anything extra such as your name or chapter number.
+    Include the comment block as seen in the What to Submit section, with your name, module number, and part.
+    Use the looping concepts covered in this Module.
+
+----------
+Part A
+
+Create a program called carpet_cost.py that:
+
+    Input #1: Prompts the user for the length of a room that was carpeted.
+    Input #2: Prompts the user for the width of the room that was carpeted.
+    Input #3: Prompts the use for the amount spent on carpeting.
+    Calculates the area of the carpet (length x width).
+    Calculates the cost per square foot (cost / area).
+    Use try and at least two except statement two handle two probable problem areas. A relevant error message is to be displayed to the user:
+        if the value entered for length and/or width is 0; the error message for this condition must include the word zero,
+        if a non-number is entered for length, width, or cost; the error message for this condition must include the word non-number.
+    Outputs the area and cost per square foot to the user. Dollar values must display two decimal places (refer to zyBooks, chapter 7.2, on floating-point precision)
+
+Examples (note that your program does not need to look, or behave, like exactly like these examples - they're here to show that all error conditions are caught and that, when there is no error condition, the result is outputted):
+
+Part B
+
+Create a program called letter_grade.py that:
+
+    Prompts the user for their current grade percentage (e.g.: 92). 
+    Determines the letter grade. The letter grade must be uppercase. For the purposes of this program, letter grades are:
+        90 - 100 = A
+        80 - 89 = B
+        70 - 79 = C
+        60 - 69 = D
+        less than 60 = F
+    Within a try-except structure, raise two different exceptions. Note that there are three listed and they must all be handled. Exceptions must be raised for at least two of them. The third can be handled however you wish. Note that you can use ValueError (as described in zyBooks 10.3) and do not need to create a custom exception (as described in 10.6).
+        for an input less than zero; the error message must include the word zero,
+        for an input greater than 100; the error message must include the words one hundred,
+        for an input that is not a number; the error message must include the word non-number.
+
+Examples (note that your program does not need to look, or behave, like exactly like these examples - they're here to show that all error conditions are caught and that, when there is no error condition, the result is outputted):
+
+What To Submit
+
+    A. carpet_cost.py
+    B. letter_grade.py

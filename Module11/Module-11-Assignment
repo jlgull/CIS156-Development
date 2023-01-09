@@ -1,0 +1,50 @@
+Module 11 Programming Assignment
+
+In order to receive credit for a Programming Assignment, each submission must:
+
+    Run. No credit will be given to programs that do not run.
+    Use the filename(s) specified in the What to Submit section. Do not include anything extra such as your name or chapter number.
+    Include the comment block as seen in the What to Submit section, with your name, module number, and part.
+    Use the modules indicated in the directions. Solutions that use alternative means of calculation may not receive credit.
+
+----------
+
+Remember: If you use an outside resource to help solve a problem, give credit in a comment within your code.
+
+Part A
+
+Create a program called student_group.py that uses a function from the random module to create a list of random students to work together on a group project, as follows:
+
+    Create a list of at least 10 student names.
+    Display the student list.
+    Prompt the user to input how many students should be in the group.
+    Generate a random number appropriate to the number of names in the list.
+    Use the random number to retrieve and print the corresponding name from the list.
+    Repeat until you have output the correct number of students, as input by the user.
+
+Note: Depending on your solution, the same student could be chosen multiple times. Although you can solve this issue if you want, you are not required to address it for the assignment. What's important is that the proper number of students are chosen.
+
+Hint: You may find the w3schools Links to an external site.or Python Links to an external site.random module references helpful.
+
+Examples (note that your program does not need to look, or behave, like exactly like these examples - it is here to show you one way it might look when the program runs properly):
+
+
+Part B
+
+Create a program called math_module.py that uses the math module (https://docs.python.org/3.5/library/math.html Links to an external site.) to do the following:
+
+    Prompt the user to enter a number.
+    Calculate and output the absolute value of the entered number using a function from the math module. For example, the absolute value of 4 is 4.0 and the absolute value of -4 is 4.0.
+    Calculate and output the square root of the entered number using a function from the math module. For example: the square root of 4 is 2.0 and the square root of 12 is 3.4641016151377544. Note that Python cannot calculate the square root of a negative number, so you will have to take steps to handle that scenario.
+
+Do not format the output; simply display the output form the math function.
+
+Hint: You may find the w3schools Links to an external site.or Python Links to an external site.math module references helpful.
+
+Example (note that your program does not need to look, or behave, like exactly like this example - it is here to show you one way it might look when the program runs properly):
+
+
+What To Submit
+
+    A. student_group.py
+    B. math_module.py
