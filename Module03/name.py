@@ -2,6 +2,7 @@
 #
 # Author: Jonathan Heard
 # Module 3, Assignment Part A
+# Program name: name.py
 
 """
 This is the first programming assignment.

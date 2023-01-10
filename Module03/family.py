@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 #
 # Author: Jonathan Heard
-# Module 3, Assignment Part b
+# Module 3, Assignment Part B
+# Program name: family.py
 
 """
 This is the first programming assignment.
