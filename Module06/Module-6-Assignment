@@ -18,7 +18,7 @@ Create a program called total_cash.py that determines the total value of a walle
 
 For example, if a user has 3 ones, 3 tens, and 1 fifty, their total is $83 in cash.
 
-1-2b039b2c-7a93-455d-b5ea-53531f350858.JPG
+
 Part B
 
 Create a program called shipping_price.py that calculates the shipping price for a purchase.
