@@ -41,7 +41,7 @@ Example (note that your program does not need to look, or behave, like exactly l
 #
 
 # Preset all required Variables.
-
+# None required.
 
 # Beginning of code
 
