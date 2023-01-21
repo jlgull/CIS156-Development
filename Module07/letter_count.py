@@ -137,7 +137,23 @@ for counter in range(len(entered_words)):
 for counter in range(len(entered_words)):
     total_letters = total_letters + letter_counter[counter]
 
-print(entered_words, unique_letter, letter_counter, total_letters)
+#  Output is a formatted table displaying:
+#         the four words,
+#         the number of times the letter appears in each word/phrase,
+#         the total number of times the letter appears.
+#     Output a formatted table displaying the results.
+#
+
+# print(entered_words, unique_letter, letter_counter, total_letters)
+
+print(f"\n{55 * '-'}")
+print(f"| {'Words or Phrases':<22}{f'Occurrences of the letter - {unique_letter}':>19} |")
+print(55 * "-")
+for counter in range(len(entered_words)):
+    print(f"| {entered_words[counter]:<40}|{letter_counter[counter]:>10} |")
+print(55 * "-")
+print(f"| {f'Total occurrences of {unique_letter}':<40}|{total_letters:>10} |")
+print(55 * "-")
 
 # Zazzle Zoo\nzebra\nGoat\nZzZzZzZ\nz\n
 
