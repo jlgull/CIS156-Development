@@ -10,13 +10,20 @@ In order to receive credit for a Programming Assignment, each submission must:
 
 Directions
 
-Create a program called pets.py that that defines a pet class with at least three general attributes (fields) for all pets (for example, name, age, etc) and at least two functions/behaviors for all pets (for example, eating). The functions can simply print something.
+Create a program called pets.py that that defines a pet class with at least three general attributes
+    (fields) for all pets (for example, name, age, etc) and at least two functions/behaviors
+    for all pets (for example, eating). The functions can simply print something.
 
-Next, create two derived classes from the base class that represent specific types of pets. For example, one derived class might be a dog. Add at least one attribute/field and at least two functions/behaviors specific to that kind of pet.
+Next, create two derived classes from the base class that represent specific types of pets.
+    For example, one derived class might be a dog. Add at least one attribute/field and at least
+    two functions/behaviors specific to that kind of pet.
 
-Finally, demonstrate that both derived classes work by creating at least one instance of each and showing off their fields and functions.
+Finally, demonstrate that both derived classes work by creating at least one instance of
+    each and showing off their fields and functions.
 
-Note: In preparation for the Final Project, this assignment leaves room for you to make more decisions about the code than previous assignments. Just be sure that your submission demonstrates the key concepts from the chapter, as indicated in these directions.
+Note: In preparation for the Final Project, this assignment leaves room for you to make more decisions
+    about the code than previous assignments. Just be sure that your submission demonstrates the key
+    concepts from the chapter, as indicated in these directions.
 
 What To Submit
 

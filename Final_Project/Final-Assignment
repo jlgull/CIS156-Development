@@ -12,12 +12,18 @@ Required elements - each must be used
     the main program file must be named final_project.py √
         Additional module files may be named however you see fit.
         If used, make certain to submit them with final_project.py and CIS156 Final Project Documentation.docx
-    a comment block in the final_project.py file that includes your name, class, and the words, "final project".  √
+    a comment block in the final_project.py file that includes your name, class, and the words, "final project". √
     at least on if statement(s) (with or without elif and else) √
-    a function that accepts and uses at least one argument / parameter (This requirement cannot be met using a simple "set" method or constructor (__init__).) √
-    a function with a return statement that returns a value (This requirement cannot be met using a simple "get" method.) Note: this may be the same function that accepts a parameter for the previous requirement, or it may be a different function. √
-    use of a function's return value in a meaningful way √
-    using a loop in a meaningful way (For example, a loop that iterates only one time before being stopped isn't meaningful. Likewise, a loop that iterates multiple times but does nothing useful/significant within the project isn't meaningful.) √
+    a function that accepts and uses at least one argument / parameter
+        (This requirement cannot be met using a simple "set" method or constructor (__init__).) √
+    a function with a return statement that returns a value
+        (This requirement cannot be met using a simple "get" method.) √
+        Note: this may be the same function that accepts a parameter for the previous requirement,
+        or it may be a different function. √
+    use of a function's return value in a meaningful way
+    using a loop in a meaningful way (For example, a loop that iterates only one time before being
+        stopped isn't meaningful. Likewise, a loop that iterates multiple times but does nothing
+        useful/significant within the project isn't meaningful.) √
     basic exception handling using try and except √
 
 Elective elements - at least one must be used √
@@ -30,17 +36,23 @@ Each √ represents a graded item. There are ten.
 
 NOTE: If all three elective elements are used, a bonus will be earned.
 
-NOTE: You will not receive credit for completing a tutorial or modifying/adapting code from another programmer or source. Submission must be your original work, with appropriate credit/acknowledgment given to any sources you used as reference.
+NOTE: You will not receive credit for completing a tutorial or modifying/adapting code from another programmer
+    or source. Submission must be your original work, with appropriate credit/acknowledgment given to any
+    sources you used as reference.
 
 ----------
 
-Be sure to submit all relevant files, including the completed CIS156 Final Project Documentation.docx and, if used, all files necessary to execute your program.
+Be sure to submit all relevant files, including the completed CIS156 Final Project Documentation.docx and,
+    if used, all files necessary to execute your program.
 
 =====================================
 
 Documentation file is attached.
 
-final, the grading script file is attached (and probably needs to be converted using dos2unix). It is meant to be placed in the PATH someplace. It is a standalone grading script. While it can't determine if something has been used in a "meaningful way", it should show enough information during its processing to determine that.
+final, the grading script file is attached (and probably needs to be converted using dos2unix).
+    It is meant to be placed in the PATH someplace. It is a standalone grading script.
+    While it can't determine if something has been used in a "meaningful way",
+    it should show enough information during its processing to determine that.
 
 
 

@@ -70,10 +70,14 @@ def clear():
 # size_of_list  - Holds the number of random groups to select
 # show_output   - Controls whether sorting is displayed as it happens or not
 # pass_num      - Counter for the number of passes in the sort routine.
+# swap_count    - Used to keep track of the number of swaps per pass. It is incremented
+#                 for each NO SWAP. If swap_count >= iterations in a pass (num_entries), 
+#                 then there is no need to continue; the list is fully sorted.
 
 # Preset any required variables
 show_output = ''
 pass_num = 0
+swap_count = 0
 
 # Preset required list variables
 word_list = []
@@ -184,26 +188,34 @@ while pass_num < len(selected_list):
     for i in range(num_entries):
 
         if selected_list[i] > selected_list[i + 1]:
+            # reset swap_count to 0 as a swap took place during this pass
+            swap_count = 0
             if show_output == 'y':
                print(f'+++ swapping {selected_list[i]} with {selected_list[i + 1]}')
             temp = selected_list[i]
             selected_list[i] = selected_list[i + 1]
             selected_list[i + 1] = temp
         else:
+            # increment swap_count to keep track of number of NO SWAPs in a pass
+            swap_count += 1
             if show_output == 'y':
                print(f'--- NOT swapping {selected_list[i]} with {selected_list[i + 1]}')
 
         if show_output == 'y':
-            print(f'The current list: {selected_list}\n')
-
+            print(f'The current list:\n{selected_list}\n')
+    
+    # this check to see if any swapping took place during a pass. If not, the list
+    # is fully sorted - so stop the process.
+    if swap_count >= num_entries:
+        break
     num_entries -= 1
     pass_num += 1
 
 # Print out the results
 
 print(f'\nThe list to be sorted had {len(selected_list)} items in it.')
-print(f'The original, unsorted, list:\n\t{temp_list}')
+print(f'The original, unsorted, list:\n{temp_list}')
 
-print(f'\nThe sorted list (after {pass_num} passes):\n\t{selected_list}')
+print(f'\nThe sorted list (after {pass_num} passes):\n{selected_list}')
 print(f"\n\t\t--- {(thread_time_ns() - start_time)/1e3:,.0f} microseconds ---")
 print(f"\t\t--- {(thread_time_ns() - start_time)/1e9:,.4f} seconds ---")

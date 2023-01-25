@@ -1,20 +1,29 @@
 #!/usr/bin/python3
 #
 # Author: Jonathan Heard
-# Module 7, Assignment Part B
-# Program name: str_modifier.py
+# Module 8, Assignment Part B
+# Program name: baseball_players.py
 
 """
 ----------
 Part B
 
-Create a program in a file named str_modifier.py that:
+Create a program called baseball_players.py that:
 
-    Includes adequate instructions to the user about how to use the program.
-    Asks the user for the name of their favorite sports team. The single input should be the
-      name of the city and team name; for example: Phoenix Cardinals or Los Angeles Lakers
-    Replaces all spaces with underscore characters. This must be done using a string method.
-    Outputs the result.
+    Has a dictionary with seven baseball players (for example: Babe Ruth, Louis Gonzalez), etc.
+      and their lifetime batting average (for example: .342, .283).
+      One of the players must be Willie Mays who had a lifetime batting average of .301.
+      (Note: a good reference to look up players can be found here: https://www.baseball-reference.com/
+      Links to an external site.).
+    Display the available players to the user.
+    Prompt the user to enter one of the names. Instruct the user that proper capitalization and spaces are required.
+    Display the batting average for the play that the user entered.
+    The program repeats the previous three steps this until the user enters quit at the prompt.
+
+Note: The program does NOT need to gracefully handle the error that may occur if the player is not
+  found in the dictionary; for now, your program only needs to work when a player is entered correctly.
+
+Note: If the program displays a .301 batting average as 0.301, that is OK.
 
 Example (note that your program does not need to look, or behave, like exactly like this example -
   it is here to show you one way it might look when the program runs properly):
@@ -67,37 +76,3 @@ def clear():
 #
 # String Variables
 #
-# city_team     - Entered string, consisting of a city and a sports team.
-
-
-# Preset all required Variables.
-# None required for this program.
-
-# Define all local functions, other than the clear() above.
-#
-
-
-# Beginning of code
-
-# Includes adequate instructions to the user about how to use the program.
-#     Asks the user for the name of their favorite sports team. The single input should be the
-#       name of the city and team name; for example: Phoenix Cardinals or Los Angeles Lakers
-
-
-# Clear screen and gather the input information.
-
-clear()
-
-# General information about the program.
-
-print(f"\nThis program asks for the two items on a single input.")
-
-# Gather the data needed.
-
-city_team = input(f"\nEnter a city and the sports team from that city, \n\tfor example, (Phoenix Cardinals) : ")
-
-# Replaces all spaces with underscore characters. This must be done using a string method.
-# Outputs the result.
-
-print(f"\nThe entered data was '{city_team}'."
-      f"\n\nWith the spaces replaced with underscores it looks like this '{city_team.replace(' ', '_')}'.")

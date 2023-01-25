@@ -67,37 +67,3 @@ def clear():
 #
 # String Variables
 #
-# city_team     - Entered string, consisting of a city and a sports team.
-
-
-# Preset all required Variables.
-# None required for this program.
-
-# Define all local functions, other than the clear() above.
-#
-
-
-# Beginning of code
-
-# Includes adequate instructions to the user about how to use the program.
-#     Asks the user for the name of their favorite sports team. The single input should be the
-#       name of the city and team name; for example: Phoenix Cardinals or Los Angeles Lakers
-
-
-# Clear screen and gather the input information.
-
-clear()
-
-# General information about the program.
-
-print(f"\nThis program asks for the two items on a single input.")
-
-# Gather the data needed.
-
-city_team = input(f"\nEnter a city and the sports team from that city, \n\tfor example, (Phoenix Cardinals) : ")
-
-# Replaces all spaces with underscore characters. This must be done using a string method.
-# Outputs the result.
-
-print(f"\nThe entered data was '{city_team}'."
-      f"\n\nWith the spaces replaced with underscores it looks like this '{city_team.replace(' ', '_')}'.")

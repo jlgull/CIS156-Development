@@ -2,8 +2,8 @@
 # Original Author: Tracy Baker
 # Modified by: Jonathan Heard
 # Sort a group of items; integers, floating point or string.
-#   Using a Tracy's bubble sort in a "cone" design.
-# Program name: sort9.py
+#   Using a new sort concept, by Jonathan.
+# Program name: sort12.py
 #
 
 # Import all required modules
@@ -70,10 +70,15 @@ def clear():
 # size_of_list  - Holds the number of random groups to select
 # show_output   - Controls whether sorting is displayed as it happens or not
 # pass_num      - Counter for the number of passes in the sort routine.
+# swap_count    - Used to keep track of the number of swaps per pass. It is incremented
+#                 for each NO SWAP. If swap_count >= iterations in a pass (num_entries), 
+#                 then there is no need to continue; the list is fully sorted.
 
 # Preset any required variables
 show_output = ''
 pass_num = 0
+swap_count = 0
+done = 0
 
 # Preset required list variables
 word_list = []
@@ -130,7 +135,7 @@ if data_type != 'string':
     
     # since the list will be numbers (integers or floating points),
     # ask the user for minimum and maximum values
-    print('\nEnter minimum and maximum values for the number list.')
+    print('\nEnter minimum and maximum values for the random number list.')
     while True:
 
         min = input('min: ')
@@ -157,12 +162,12 @@ if data_type != 'string':
 else:
     
     # generate string list
-    for i in range(26):
-        for j in range(26):
-            for k in range(26):
-                word_list.append(chr(i + 97) + chr(j + 97) + chr(k + 97))
-
-    # word_list, at this point has 17,576 elements. use the sample()
+    for i in range(43):
+        for j in range(43):
+            for k in range(43):
+                new_word = (chr(i + 48) + chr(j + 48) + chr(k + 48))
+                word_list.append(new_word.lower())
+    # word_list, at this point has 79,507 elements. use the sample()
     # function to pick size_of_list elements and place the result into
     # selected_list
     selected_list = sample(word_list, size_of_list)
@@ -175,35 +180,30 @@ temp_list = selected_list[:]
 # Start the timer for the sort process
 start_time = thread_time_ns()
 
-# Sort Routine
-num_entries = len(selected_list) - 1
-while pass_num < len(selected_list):
-    if show_output == 'y':
-       print(f'\nPASS NUMBER {pass_num + 1}')
+# New Sort Routine, something different.
+i = 0
+while done == 0:
+    # Test 2 items to determine if they need to be swapped.
+    if selected_list[i] > selected_list[i + 1]:
+        # Swap tested values if required.
+        selected_list[i + 1], selected_list[i] = selected_list[i], selected_list[i + 1]
+        swap_count += 1
+        # Reset i and begin the testing / sorting loop again.
 
-    for i in range(num_entries):
-
-        if selected_list[i] > selected_list[i + 1]:
-            if show_output == 'y':
-               print(f'+++ swapping {selected_list[i]} with {selected_list[i + 1]}')
-            temp = selected_list[i]
-            selected_list[i] = selected_list[i + 1]
-            selected_list[i + 1] = temp
-        else:
-            if show_output == 'y':
-               print(f'--- NOT swapping {selected_list[i]} with {selected_list[i + 1]}')
-
-        if show_output == 'y':
-            print(f'The current list: {selected_list}\n')
-
-    num_entries -= 1
+        i = -1
+    i += 1
     pass_num += 1
+    # If all comparisons are completed, end the while loop.
+    if i == len(selected_list) - 1:
+        done = 1
+
 
 # Print out the results
 
 print(f'\nThe list to be sorted had {len(selected_list)} items in it.')
-print(f'The original, unsorted, list:\n\t{temp_list}')
+print(f'The original, unsorted, list:\n{temp_list}')
 
-print(f'\nThe sorted list (after {pass_num} passes):\n\t{selected_list}')
+print(f'\nThe sorted list (after {pass_num} exchanges):\n{selected_list}')
 print(f"\n\t\t--- {(thread_time_ns() - start_time)/1e3:,.0f} microseconds ---")
+
 print(f"\t\t--- {(thread_time_ns() - start_time)/1e9:,.4f} seconds ---")

@@ -6,10 +6,11 @@
 # Program name: sort7b.py
 #
 
-import time
+from time import thread_time_ns
 
 
 user_list = []
+initial_list = []
 temp_list = []
 i = 1
 j = 0
@@ -63,9 +64,12 @@ while True:
     user_list.append(user_input)
     i += 1
 
-start_time = time.thread_time_ns()
+initial_list = user_list[:]
+
+start_time = thread_time_ns()
 
 #num_entries = len(user_list) - 1
+print(f"\n{len(user_list)}\n")
 while j < len(user_list):
     print(f'\nPASS NUMBER {j + 1}')
 
@@ -76,11 +80,11 @@ while j < len(user_list):
             temp = user_list[i]
             user_list[i] = user_list[i + 1]
             user_list[i + 1] = temp
-            temp_list = user_list
+            temp_list = user_list[:]
         else:
             print(f'--- NOT swapping {user_list[i]} with {user_list[i + 1]}')
             print(f"i = {i} j = {j}")
-            if user_list == temp_list and i == j:
+            if user_list == temp_list and i == (len(user_list) - 1):
                 done = 1
                 print(f"done = {done} i = {i} j = {j}")
                 break
@@ -94,7 +98,7 @@ while j < len(user_list):
     j += 1
 
 print(f'\nThe list has {len(user_list)} items in it.')
-print(f'The original, unsorted, list: {user_list}')
+print(f'The original, unsorted, list: {initial_list}')
 
 print(f'\nThe sorted list ({j} passes): {user_list}')
-print(f"--- {(time.thread_time_ns() - start_time)/1e6:,.3f} milliseconds ---" )
+print(f"\n--- {(thread_time_ns() - start_time)/1e6:,.3f} milliseconds ---" )

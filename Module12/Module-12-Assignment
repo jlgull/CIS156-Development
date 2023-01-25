@@ -10,33 +10,40 @@ In order to receive credit for a Programming Assignment, each submission must:
 
 Part A
 
-Create a program called poem_file.py that:
+Create a program called poem_file.py that:
 
-    Reads the tin_wedding_whistle.txt Download tin_wedding_whistle.txt file into a list.
+    Reads the tin_wedding_whistle.txt Download tin_wedding_whistle.txt file into a list.
     Prompts the user to enter a line number.
     Displays that line from the file.
-    Keep repeating until the user enters the word exit at the prompt.
+    Keep repeating until the user enters the word exit at the prompt.
     Close the file.
 
-File to be used for testing: tin_wedding_whistle.txt Download tin_wedding_whistle.txt. Note: With most IDEs, you will need to add this file to your project; you can usually drag and drop the file to do so. You may also have to use Save As to save the file, making certain to save it into the same directory as poem_file.py.
+File to be used for testing: tin_wedding_whistle.txt Download tin_wedding_whistle.txt.
+    Note: With most IDEs, you will need to add this file to your project;
+    you can usually drag and drop the file to do so. You may also have to use Save As to save the file,
+    making certain to save it into the same directory as poem_file.py.
 
-Example (note that your program does not need to look, or behave, like exactly like this example - it is here to show you one way it might look when the program runs properly):
+Example (note that your program does not need to look, or behave, like exactly like this example -
+    it is here to show you one way it might look when the program runs properly):
 
 Part B
 
-Create a program called mailing_label.py that:
+Create a program called mailing_label.py that:
 
-    Prompts the user to input the following recipient information, in order, storing each in a separate variable:
+    Prompts the user to input the following recipient information, in order, storing each in a separate variable:
         Name
         House / apartment and street
         City
         State
         Zip Code
-    Creates a new file called mailing_label.txt. It will have your name as the sender's information, in the upper-left corner, and the information that was just collected as the recipient's information in the middle - like seen in the example, below.
+    Creates a new file called mailing_label.txt. It will have your name as the sender's information,
+        in the upper-left corner, and the information that was just collected as the recipient's
+        information in the middle - like seen in the example, below.
     When finished writing, close the mailing_label.txt file.
     Display the contents of the mailing_label.txt file. This needs to look similar to the mailing label in the example.
 
-Example (note that your program does not need to behave exactly like this example - it is here to show you one way it might look when the program runs properly):
+Example (note that your program does not need to behave exactly like this example -
+    it is here to show you one way it might look when the program runs properly):
 
 
 What To Submit
