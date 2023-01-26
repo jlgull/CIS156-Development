@@ -3,7 +3,7 @@
 # Modified by: Jonathan Heard
 # Sort a group of items; integers, floating point or string.
 #   Using a Tracy's bubble sort in a "cone" design.
-# Program name: sort9.py
+# Program name: sort14.py
 #
 
 # Import all required modules
@@ -32,13 +32,11 @@ from os import system, name
 """
 
 # Import the time library to allow for the timing of the sorting process
-
 from time import thread_time_ns
 
 #
 # Define all functions used in this program
 #
-
 def clear():
     # Found on this website: https://www.geeksforgeeks.org/clear-screen-python/
     # Define the clear function, which is agnostic to the operating system
@@ -160,15 +158,13 @@ if data_type != 'string':
             selected_list.append(uniform(min, max))
 else:
     
-    # generate string list
-    for i in range(75):
-        for j in range(75):
-            for k in range(75):
-                #new_word = (chr(i + 48) + chr(j + 48) + chr(k + 48))
-                word_list.append(chr(i + 48) + chr(j + 48) + chr(k + 48))
-    print(len(word_list), word_list)
+    # generate string list (updated one from Jonathan's sort11.py)
+    for i in range(43):
+        for j in range(43):
+            for k in range(43):
+                word_list.append((chr(i + 48) + chr(j + 48) + chr(k + 48)).lower())
 
-    # word_list, at this point has 79,507 elements. use the sample()
+    # word_list, at this point has 17,576 elements. use the sample()
     # function to pick size_of_list elements and place the result into
     # selected_list
     selected_list = sample(word_list, size_of_list)
@@ -194,10 +190,12 @@ while pass_num < len(selected_list):
             swap_count = 0
             if show_output == 'y':
                print(f'+++ swapping {selected_list[i]} with {selected_list[i + 1]}')
-            temp = selected_list[i]
-            selected_list[i] = selected_list[i + 1]
-            selected_list[i + 1] = temp
+
+            # v14: updated how the list items are swapped   
+            selected_list[i + 1], selected_list[i] = selected_list[i], selected_list[i + 1]
+
         else:
+
             # increment swap_count to keep track of number of NO SWAPs in a pass
             swap_count += 1
             if show_output == 'y':
@@ -210,11 +208,11 @@ while pass_num < len(selected_list):
     # is fully sorted - so stop the process.
     if swap_count >= num_entries:
         break
+
     num_entries -= 1
     pass_num += 1
 
 # Print out the results
-
 print(f'\nThe list to be sorted had {len(selected_list)} items in it.')
 print(f'The original, unsorted, list:\n{temp_list}')
 

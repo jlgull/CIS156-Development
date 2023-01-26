@@ -2,9 +2,42 @@
 # Original Author: Tracy Baker
 # Modified by: Jonathan Heard
 # Sort a group of items; integers, floating point or string.
-#   Using a Tracy's bubble sort in a "cone" design.
-# Program name: sort9.py
+#   Using a bubble sort from the internet.
+# Modified the performance time to a single line.
+# Program name: sort18j.py
 #
+
+def sortRoutine(_list, _showinfo = 'n'):
+    list_length = len(_list)
+    swapped = 0
+    exchanges = 0
+
+    # Traverse through all array elements
+    for i in range(list_length - 1):
+
+        for j in range(list_length - i - 1):
+
+            # traverse the list from 0 to list_length - i - 1
+            # Swap if the element found is greater than the next element
+            if _list[j] > _list[j + 1]:
+
+                # if showinfo = 'y':
+                    # Show stuff
+
+                swapped = 0
+                exchanges += 1
+                _list[j], _list[j + 1] = _list[j + 1], _list[j]
+
+            else:
+                # put print statements and code to detect end-of-list
+                swapped += 1
+         
+#        if swapped == 'y':
+            # if we haven't needed to make a single swap, we
+            # can just exit the main loop.
+#            return _list
+    
+    return _list, exchanges
 
 # Import all required modules
 # Import sample from the random module.
@@ -32,13 +65,11 @@ from os import system, name
 """
 
 # Import the time library to allow for the timing of the sorting process
-
 from time import thread_time_ns
 
 #
 # Define all functions used in this program
 #
-
 def clear():
     # Found on this website: https://www.geeksforgeeks.org/clear-screen-python/
     # Define the clear function, which is agnostic to the operating system
@@ -89,7 +120,6 @@ temp_list = []
 clear()
 
 # Select data_type to be sorted and how many.
-
 # Set the default data_type to "string".
 data_type = 'string'
 
@@ -160,15 +190,13 @@ if data_type != 'string':
             selected_list.append(uniform(min, max))
 else:
     
-    # generate string list
+    # generate string list (updated one from Jonathan's sort11.py)
     for i in range(75):
         for j in range(75):
             for k in range(75):
-                #new_word = (chr(i + 48) + chr(j + 48) + chr(k + 48))
-                word_list.append(chr(i + 48) + chr(j + 48) + chr(k + 48))
-    print(len(word_list), word_list)
+                word_list.append((chr(i + 48) + chr(j + 48) + chr(k + 48)).lower())
 
-    # word_list, at this point has 79,507 elements. use the sample()
+    # word_list, at this point has 421,875 elements. use the sample()
     # function to pick size_of_list elements and place the result into
     # selected_list
     selected_list = sample(word_list, size_of_list)
@@ -181,43 +209,29 @@ temp_list = selected_list[:]
 # Start the timer for the sort process
 start_time = thread_time_ns()
 
-# Sort Routine
-num_entries = len(selected_list) - 1
-while pass_num < len(selected_list):
-    if show_output == 'y':
-       print(f'\nPASS NUMBER {pass_num + 1}')
+# call sort function
+selected_list, swaps = sortRoutine(selected_list, show_output)
 
-    for i in range(num_entries):
-
-        if selected_list[i] > selected_list[i + 1]:
-            # reset swap_count to 0 as a swap took place during this pass
-            swap_count = 0
-            if show_output == 'y':
-               print(f'+++ swapping {selected_list[i]} with {selected_list[i + 1]}')
-            temp = selected_list[i]
-            selected_list[i] = selected_list[i + 1]
-            selected_list[i + 1] = temp
-        else:
-            # increment swap_count to keep track of number of NO SWAPs in a pass
-            swap_count += 1
-            if show_output == 'y':
-               print(f'--- NOT swapping {selected_list[i]} with {selected_list[i + 1]}')
-
-        if show_output == 'y':
-            print(f'The current list:\n{selected_list}\n')
-    
-    # this check to see if any swapping took place during a pass. If not, the list
-    # is fully sorted - so stop the process.
-    if swap_count >= num_entries:
-        break
-    num_entries -= 1
-    pass_num += 1
+# Calculate the actual run time.
+run_time = thread_time_ns() - start_time
 
 # Print out the results
 
-print(f'\nThe list to be sorted had {len(selected_list)} items in it.')
-print(f'The original, unsorted, list:\n{temp_list}')
+print(f'\nThe unsorted list:\n{temp_list}')
 
-print(f'\nThe sorted list (after {pass_num} passes):\n{selected_list}')
-print(f"\n\t\t--- {(thread_time_ns() - start_time)/1e3:,.0f} microseconds ---")
-print(f"\t\t--- {(thread_time_ns() - start_time)/1e9:,.4f} seconds ---")
+print(f'\nThe sorted list :\n{selected_list}')
+
+print(f'\nThe list to be sorted had {len(selected_list)} {data_type} items in it.')
+print(f'\nThe sorting process took {swaps} swaps and the run time was:')
+
+# Modified this section to display the run_time of the sort,
+#   with the correct time units.
+
+if run_time <= 1e3:
+    print(f"\n\t--- {run_time:,.0f} nanoseconds ---")
+elif run_time <= 1e6:
+    print(f"\n\t--- {run_time/1e3:,.3f} microseconds ---")
+elif run_time <= 1e9:
+    print(f"\n\t--- {run_time/1e6:,.3f} milliseconds ---")
+else:
+    print(f"\n\t--- {run_time/1e9:,.3f} seconds ---")

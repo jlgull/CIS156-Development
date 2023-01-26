@@ -165,8 +165,7 @@ else:
     for i in range(43):
         for j in range(43):
             for k in range(43):
-                new_word = (chr(i + 48) + chr(j + 48) + chr(k + 48))
-                word_list.append(new_word.lower())
+                word_list.append(chr(i + 48) + chr(j + 48) + chr(k + 48))
     # word_list, at this point has 79,507 elements. use the sample()
     # function to pick size_of_list elements and place the result into
     # selected_list
