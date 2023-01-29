@@ -27,6 +27,7 @@ Note: If the program displays a .301 batting average as 0.301, that is OK.
 
 Example (note that your program does not need to look, or behave, like exactly like this example -
   it is here to show you one way it might look when the program runs properly):
+
 """
 
 #
@@ -45,6 +46,7 @@ def clear():
 
     # If Windows, cls is used, else clear (for Mac and Linux)
     (system('cls')) if name == 'nt' else (system('clear'))
+
 
 # Variable List
 #
@@ -81,7 +83,6 @@ mlb_player_dic = {}
 
 mlb_player_dic = {'Willie Mays': '0.301', 'Ty Cobb': '0.366', 'Ted Williams': '0.344', 'Babe Ruth': '0.342',
                   'Lou Gehrig': '0.340', 'Wade Boggs': '0.328', 'Joe DiMaggio': '0.325'}
-
 # Use while, regarding the desire to re-run the program.
 # Set the while control value to "Y".
 do_again = "Y"
@@ -113,6 +114,19 @@ while do_again != "N":
 
     print(f'\nThe Lifetime Batting average for - {player_select} - is: '
           f'{mlb_player_dic.get(f"{player_select}", "The name entered is unknown or misspelled")}.')
+
+    '''
+    print(f'\nThis program contains a list of {len(mlb_player_dic)} MLB players'
+          f'\nand their lifetime batting averages. Here is the list:')
+    # Print the Players and their lifetime batting averages.
+    print(f"{45 * '-'}")
+    print(f"|{'Player Name':^16}| {f'Lifetime Batting Average':^24} |")
+    print(45 * "-")
+    for dic_key, dic_value in mlb_player_dic.items():
+        print(f'|{dic_key:^16}| {dic_value:^24} |')
+    print(45 * "-")
+
+    '''
 
     #     The program repeats the previous steps this until the user enters quit at the prompt.
 

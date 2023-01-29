@@ -23,46 +23,62 @@ Example (note that your program does not need to look, or behave, like exactly l
 #
 # Import all required options
 #
-# Import system and name from the os module.
-from os import system, name
-
-""" name    - The name of the operating system dependent module imported. 
-                The following names have currently been registered: 'posix', 'nt', 'java'.
-
-    system  - Execute the command (a string) in a subshell. 
-                This is implemented by calling the Standard C function system(), and has the same 
-                limitations. Changes to sys.stdin, etc. are not reflected in the environment of the
-                executed command. If command generates any output, it will be sent to the interpreter
-                standard output stream. The C standard does not specify the meaning of the return value 
-                of the C function, so the return value of the Python function is system-dependent.            
-
-"""
-
-#
-# Define the clear function definition for use in this program
-#
+# Define functions and Import modules as required.
 
 def clear():
+    # Import system and name from the os module.
+    from os import system, name
+
     # Found on this website: https://www.geeksforgeeks.org/clear-screen-python/
     # Define the clear function, which is agnostic to the operating system
     # being used. In PyCharm you have to sent "Emulate terminal in output console",
     # which is found under the "Edit run configuration" tab.
 
-    # for windows
-    if name == 'nt':
-        _ = system('cls')
-
-    # for mac and linux(here, os.name is 'posix')
-    else:
-        _ = system('clear')
+    # If Windows, cls is used, else clear (for Mac and Linux)
+    (system('cls')) if name == 'nt' else (system('clear'))
 
 
 # Variable List
 #
 # Integer Variables
 #
+# item_count        - Number of items to be purchased.
+# i                 - Loop counter used to collect enter items.
 #
 # Floating Variables
 #
 # String Variables
 #
+# List Variables
+#
+# item_list         - List of items being purchased today.
+#
+
+#
+# Preset an variables that need to be created prior to first use.
+#
+
+item_list = []
+
+
+# Clear screen and start main program.
+
+clear()
+
+# Input #1: Asks the user to input how many items they will be purchasing at the grocery store.
+#
+
+item_count = int(input('\n\nEnter the number of items you will be purchasing today: '))
+
+# Input #2 through x (where x is the number the user entered): Uses a loop to prompt the user to
+#         input each of the items they are buying, storing each input into a list.
+#
+
+for i in range(item_count):
+    item_list.append(input(f'Enter item number {i + 1}: '))
+
+
+# When finished entering items, print the full list.
+#
+
+print(item_list)
