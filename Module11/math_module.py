@@ -30,6 +30,8 @@ Example (note that your program does not need to look, or behave, like exactly l
 #
 # Import all required options
 #
+from math import fabs, sqrt
+#
 # Define functions and Import modules as required.
 
 def clear():
@@ -52,11 +54,11 @@ def clear():
 #
 # Floating Variables
 #
-#
+# base_number       - The basic entry converted to a floating point number.
 #
 # String Variables
 #
-#
+# base_number_1     - The basic entry, to be able to display a string value if required.
 #
 # List Variables
 #
@@ -70,10 +72,28 @@ def clear():
 # Use while, regarding the desire to re-run the program.
 # Set the while control value to "Y".
 do_again = "Y"
+
+# Clear screen and start main program.
+#
+clear()
+
 while do_again != "N":
-    # Clear screen and start main program.
-    #
-    clear()
+
+    print(f"\nThis program will accept any signed number, either integer or floating point, and "
+          "\nprint the absolute value of the signed number and then the square root of the absolute value.")
+
+    try:
+        # Input to gather a signed numeric value.
+
+        base_number_1 = input(f"\nEnter a signed number: ")
+        base_number = float(base_number_1)
+    except ValueError:
+        print(f"The entry, {base_number_1}, was not a signed number, please try again.")
+        continue
+
+    print(f"\nThe floating point number entered was {base_number}."
+          f"\n\tThe absolute value of the entered number is {fabs(base_number)}."
+          f"\n\tThe square root of the entered number is {sqrt(fabs(base_number))}")
 
 
 # Beginning of code

@@ -28,6 +28,9 @@ Hint: You may find the w3schools Links to an external site.or Python Links to an
 #
 # Import all required options
 #
+
+from random import sample
+
 # Define functions and Import modules as required.
 
 def clear():
@@ -58,23 +61,47 @@ def clear():
 #
 # List Variables
 #
-#
+# name_list     - List of names to be randomly selected from
 
 #
 # Preset any variables that need to be created prior to first use.
 #
 
-
 # Use while, regarding the desire to re-run the program.
 # Set the while control value to "Y".
 do_again = "Y"
+
+# Clear screen and start main program.
+#
+clear()
+
 while do_again != "N":
-    # Clear screen and start main program.
-    #
-    clear()
 
 
 # Beginning of code
+
+    """
+    Create a list of at least 10 student names.
+    Display the student list.
+    """
+    # Build a list of 10 names.
+    name_list = ['Jonathan', 'Susan', 'Mary', 'Anthony', 'Penny', 'Randall', 'Elizabeth', 'Calvin', 'Holly', 'August']
+
+    # Display the names list.
+    print(name_list)
+
+    """
+    
+    Generate a random number appropriate to the number of names in the list.
+    Use the random number to retrieve and print the corresponding name from the list.
+    Repeat until you have output the correct number of students, as input by the user.
+    """
+
+    # Prompt the user to input how many students should be in the group.
+    sample_size = int(input(f"Enter a number between 1 and {len(name_list)}: "))
+
+    print(f"Your selected list of {sample_size} names is:"
+          f"\n{sample(name_list, sample_size)}")
 
 
     # Ask if the user would like to play again.
